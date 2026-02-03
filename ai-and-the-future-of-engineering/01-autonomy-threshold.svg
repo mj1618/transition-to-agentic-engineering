@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    
+    <linearGradient id="humanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    
+    <linearGradient id="outputSmallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    
+    <linearGradient id="outputLargeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    
+    <linearGradient id="leftPanelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    
+    <linearGradient id="rightPanelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+    
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#059669"/>
+    </marker>
+    
+    <linearGradient id="qualityGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="50%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="900" height="600" fill="#f0f4f8"/>
+  
+  <text x="450" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#1e293b">The Autonomy Threshold</text>
+  <text x="450" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Why a small quality improvement creates a 10x productivity gain</text>
+  
+  <g transform="translate(40, 95)">
+    <rect x="0" y="0" width="380" height="310" rx="16" fill="url(#leftPanelGrad)" opacity="0.5"/>
+    <rect x="0" y="0" width="380" height="310" rx="16" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+    
+    <text x="190" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400e">Below Threshold</text>
+    <text x="190" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#a16207">Human Review Required</text>
+    
+    <g transform="translate(50, 100)">
+      <circle cx="42" cy="42" r="35" fill="#00000015"/>
+      <circle cx="40" cy="40" r="35" fill="url(#aiGrad)"/>
+      <rect x="22" y="25" width="36" height="28" rx="4" fill="none" stroke="white" stroke-width="2.5"/>
+      <circle cx="32" cy="38" r="5" fill="white"/>
+      <circle cx="48" cy="38" r="5" fill="white"/>
+      <rect x="28" y="48" width="24" height="3" rx="1.5" fill="white"/>
+      <rect x="35" y="15" width="10" height="12" rx="2" fill="none" stroke="white" stroke-width="2"/>
+      <text x="40" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b21b6" font-weight="bold">AI Agent</text>
+    </g>
+    
+    <path d="M 130 140 L 170 140" stroke="#64748b" stroke-width="3" marker-end="url(#arrowGray)"/>
+    
+    <g transform="translate(175, 100)">
+      <rect x="-5" y="0" width="80" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,2"/>
+      
+      <circle cx="37" cy="42" r="35" fill="#00000015"/>
+      <circle cx="35" cy="40" r="35" fill="url(#humanGrad)"/>
+      <circle cx="35" cy="28" r="10" fill="none" stroke="white" stroke-width="2.5"/>
+      <path d="M 20 60 Q 20 45 35 45 Q 50 45 50 60" fill="none" stroke="white" stroke-width="2.5"/>
+      
+      <g transform="translate(50, 55)">
+        <circle cx="0" cy="0" r="12" fill="white" stroke="#d97706" stroke-width="2"/>
+        <path d="M 0 0 L 0 -7" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 0 0 L 5 3" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      
+      <text x="35" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#92400e" font-weight="bold">Human</text>
+      <text x="35" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#b45309">(Bottleneck)</text>
+    </g>
+    
+    <path d="M 255 140 L 295 140" stroke="#64748b" stroke-width="3" marker-end="url(#arrowGray)"/>
+    
+    <g transform="translate(305, 115)">
+      <rect x="0" y="35" width="45" height="8" rx="2" fill="url(#outputSmallGrad)"/>
+      <rect x="2" y="27" width="45" height="8" rx="2" fill="url(#outputSmallGrad)"/>
+      <rect x="4" y="19" width="45" height="8" rx="2" fill="url(#outputSmallGrad)"/>
+      <text x="25" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">Output</text>
+    </g>
+    
+    <rect x="120" y="240" width="140" height="40" rx="8" fill="#f59e0b"/>
+    <text x="190" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Speed: 1x</text>
+  </g>
+  
+  <g transform="translate(480, 95)">
+    <rect x="0" y="0" width="380" height="310" rx="16" fill="url(#rightPanelGrad)" opacity="0.5"/>
+    <rect x="0" y="0" width="380" height="310" rx="16" fill="none" stroke="#059669" stroke-width="2" opacity="0.5"/>
+    
+    <text x="190" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#065f46">Above Threshold</text>
+    <text x="190" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#047857">Fully Autonomous</text>
+    
+    <g transform="translate(50, 100)">
+      <circle cx="42" cy="42" r="35" fill="#00000015"/>
+      <circle cx="40" cy="40" r="35" fill="url(#aiGrad)"/>
+      <rect x="22" y="25" width="36" height="28" rx="4" fill="none" stroke="white" stroke-width="2.5"/>
+      <circle cx="32" cy="38" r="5" fill="white"/>
+      <circle cx="48" cy="38" r="5" fill="white"/>
+      <rect x="28" y="48" width="24" height="3" rx="1.5" fill="white"/>
+      <rect x="35" y="15" width="10" height="12" rx="2" fill="none" stroke="white" stroke-width="2"/>
+      <text x="40" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b21b6" font-weight="bold">AI Agent</text>
+    </g>
+    
+    <path d="M 130 140 L 220 140" stroke="#059669" stroke-width="4" marker-end="url(#arrowGreen)"/>
+    <text x="175" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#059669" font-weight="bold">Direct</text>
+    
+    <g transform="translate(235, 70)">
+      <rect x="0" y="95" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="3" y="83" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="6" y="71" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="9" y="59" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="12" y="47" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="15" y="35" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="18" y="23" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="21" y="11" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="24" y="-1" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <rect x="27" y="-13" width="110" height="12" rx="3" fill="url(#outputLargeGrad)"/>
+      <text x="70" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#059669">Output</text>
+    </g>
+    
+    <rect x="100" y="240" width="180" height="40" rx="8" fill="#059669"/>
+    <text x="190" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Speed: 10x</text>
+  </g>
+  
+  <line x1="450" y1="120" x2="450" y2="380" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8,4"/>
+  
+  <circle cx="450" cy="250" r="25" fill="#1e293b"/>
+  <text x="450" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">VS</text>
+  
+  <g transform="translate(100, 440)">
+    <rect x="0" y="20" width="700" height="20" rx="10" fill="url(#qualityGrad)"/>
+    
+    <line x1="350" y1="10" x2="350" y2="50" stroke="#1e293b" stroke-width="3"/>
+    <rect x="290" y="0" width="120" height="22" rx="4" fill="#1e293b"/>
+    <text x="350" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Autonomy Threshold</text>
+    
+    <circle cx="300" cy="30" r="8" fill="#f59e0b" stroke="white" stroke-width="2"/>
+    <text x="300" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#92400e" font-weight="bold">Slightly Less</text>
+    <text x="300" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a16207">Quality</text>
+    
+    <circle cx="400" cy="30" r="8" fill="#059669" stroke="white" stroke-width="2"/>
+    <text x="400" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#065f46" font-weight="bold">Slightly More</text>
+    <text x="400" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#047857">Quality</text>
+    
+    <path d="M 315 30 L 385 30" stroke="#1e293b" stroke-width="2" marker-end="url(#arrowGray)"/>
+    
+    <text x="50" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">Lower Quality</text>
+    <text x="650" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">Higher Quality</text>
+  </g>
+  
+  <text x="450" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569" font-weight="bold">Small quality improvement &#8594; Crosses threshold &#8594; Removes human bottleneck &#8594; 10x speed unlocked</text>
+  
+  <text x="450" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">AI is 10x faster than humans &#8212; autonomy is what unlocks it</text>
+</svg>
