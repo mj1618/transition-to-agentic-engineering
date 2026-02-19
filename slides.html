@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI and the Future of Engineering</title>
+  <title>The Transition to Agentic Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;700;800;900&display=swap" rel="stylesheet">
@@ -179,6 +179,26 @@
       font-size: 1.15rem;
       color: rgba(255,255,255,0.75);
       line-height: 1.5;
+    }
+
+    /* ---- Statement ---- */
+    .slide-statement h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 3.8vw, 3.6rem);
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.35;
+      color: #9898b0;
+      max-width: 900px;
+      letter-spacing: -0.01em;
+    }
+
+    .slide-statement h1 strong {
+      font-weight: 800;
+      background: linear-gradient(135deg, #c4b5fd, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     /* ---- Embed ---- */
@@ -537,13 +557,24 @@
         embedHtml: '<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">this is what AUTOMATED UI testing looks like<br><br>testing <a href="https://twitter.com/Twitch?ref_src=twsrc%5Etfw">@Twitch</a>&#39;s with Maestro <a href="https://t.co/orXqgVoem8">pic.twitter.com/orXqgVoem8</a></p>&mdash; Maestro (@maestro__dev) <a href="https://twitter.com/maestro__dev/status/2017975473641308352?ref_src=twsrc%5Etfw">February 1, 2026</a></blockquote>'
       },
 
+      {
+        type: 'embed',
+        embedHtml: '<iframe width="560" height="315" src="https://www.youtube.com/embed/0YhJxJZOWBw?si=4emOjzCN2BmpUaqh&amp;clip=UgkxHO6Jj3K-topkSKV6bbIpaGRmTi10RFMa&amp;clipt=ENoyGJLcAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+      },
+
+      {
+        type: 'statement',
+        html: 'The lack of hands-on human coding <strong>introduced a different kind of engineering work, focused on systems, scaffolding, and leverage</strong>.'
+      },
+
       { type: 'single', src: BASE + '/03a/03a-context-matters.svg' },
       { type: 'single', src: BASE + '/03b/03b-context-crafting.svg' },
       { type: 'single', src: BASE + '/03c/03c-context-degradation.svg' },
       { type: 'single', src: BASE + '/04a/04-ralph.svg' },
-      { type: 'single', src: BASE + '/04b/04b-feedback-loop.svg' },
-      { type: 'single', src: BASE + '/04b/04b-compiler-gradient-descent.svg' },
-      { type: 'single', src: BASE + '/04c/04c-swarm.gif' },
+      { type: 'single', src: BASE + '/04c/04c-feedback-loop.svg' },
+      { type: 'single', src: BASE + '/04c/04c-compiler-gradient-descent.svg' },
+      { type: 'single', src: BASE + '/04b/04b-simplest-agent-loop.svg' },
+      { type: 'single', src: BASE + '/04b/04b-swarm.gif' },
 
       {
         type: 'photo',
@@ -552,7 +583,10 @@
         subtitle: 'Engineers will find their own way to use AI \u2014 your job is to pave the path'
       },
 
+      { type: 'single', src: BASE + '/04d-mcp-to-cli/04d-mcp-to-cli.svg' },
+
       { type: 'single', src: BASE + '/04d/04d-what-matters.svg' },
+      { type: 'single', src: BASE + '/04d-plan-and-execute/04d-plan-and-execute.svg' },
       { type: 'single', src: BASE + '/04d1/04d1-not-easy.svg' },
       { type: 'single', src: BASE + '/04d2/04d2-stop-reading-code.svg' },
       { type: 'single', src: BASE + '/04e/04e-where-to-start.svg' },
@@ -589,18 +623,6 @@
         ]
       },
 
-      {
-        type: 'gallery',
-        items: [
-          { kind: 'image', src: BASE + '/11/11a-linkedin.png' },
-          { kind: 'image', src: BASE + '/11/11b-linkedin.png' },
-          { kind: 'image', src: BASE + '/11/11c-linkedin.png' },
-          { kind: 'image', src: BASE + '/11/11d-linkedin.png' },
-          { kind: 'image', src: BASE + '/11/11e-linkedin.png' },
-          { kind: 'image', src: BASE + '/11/11f-linkedin.png' },
-          { kind: 'image', src: BASE + '/11/11g-linkedin.png' }
-        ]
-      },
 
       { type: 'single', src: BASE + '/12/12-engineer-value.svg' },
 
@@ -657,7 +679,7 @@
 
       switch (slide.type) {
         case 'title':
-          html = '<div class="slide slide-title"><h1>AI and the Future<br>of Engineering</h1></div>';
+          html = '<div class="slide slide-title"><h1>The Transition<br>to Agentic Engineering</h1></div>';
           break;
 
         case 'thankyou':
@@ -686,6 +708,10 @@
             '<div class="photo-caption"><h2>' + esc(slide.title) + '</h2>' +
             (slide.subtitle ? '<p>' + esc(slide.subtitle) + '</p>' : '') +
             '</div></div>';
+          break;
+
+        case 'statement':
+          html = '<div class="slide slide-statement"><h1>' + slide.html + '</h1></div>';
           break;
 
         case 'embed':
@@ -799,7 +825,7 @@
     function renderSlideHtml(slide) {
       switch (slide.type) {
         case 'title':
-          return '<div class="slide slide-title"><h1>AI and the Future<br>of Engineering</h1></div>';
+          return '<div class="slide slide-title"><h1>The Transition<br>to Agentic Engineering</h1></div>';
         case 'thankyou':
           return '<div class="slide slide-thankyou"><h1>Thank You</h1></div>';
         case 'intro':
@@ -812,6 +838,8 @@
           return '<div class="slide slide-single"><img src="' + esc(slide.src) + '" /></div>';
         case 'photo':
           return '<div class="slide slide-photo"><img src="' + esc(slide.src) + '" /><div class="photo-caption"><h2>' + esc(slide.title) + '</h2>' + (slide.subtitle ? '<p>' + esc(slide.subtitle) + '</p>' : '') + '</div></div>';
+        case 'statement':
+          return '<div class="slide slide-statement"><h1>' + slide.html + '</h1></div>';
         case 'embed':
           return '<div class="slide slide-embed" style="background:#161628;"><div style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#818cf8;font-size:120px;font-family:Outfit,sans-serif;">&#x1F426;</div></div>';
         case 'references':
