@@ -1,0 +1,9 @@
+I'm Matt!
+
+Ex-CTO @ VGW
+Co-Founder @ SupplyWise
+
+Functional programmer (10+ ICFP Contest participant)
+Builder of development tools (swarm-cli, playwright-electron-cli)
+Lover of dogs
+Tennis enthusiast

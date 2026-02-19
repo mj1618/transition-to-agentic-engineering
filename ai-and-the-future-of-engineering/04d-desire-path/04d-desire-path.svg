@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="greenPanel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="redPanel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.03"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="600" fill="#f0f4f8"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">Why Agents Get Things Wrong</text>
+  <text x="450" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748b" font-style="italic">They take the desire path</text>
+
+  <!-- Key concept box -->
+  <rect x="55" y="92" width="790" height="100" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <circle cx="100" cy="117" r="12" fill="#6366f1"/>
+  <text x="100" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">1</text>
+  <text x="122" y="122" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">An agent produces the <tspan font-weight="bold">first answer that looks valid</tspan></text>
+
+  <circle cx="100" cy="145" r="12" fill="#6366f1"/>
+  <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">2</text>
+  <text x="122" y="150" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">"Valid" = consistent with what is in the <tspan font-weight="bold">context window</tspan></text>
+
+  <circle cx="100" cy="173" r="12" fill="#6366f1"/>
+  <text x="100" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">3</text>
+  <text x="122" y="178" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">If context hasn't narrowed "valid" to "correct" &#8594; <tspan font-weight="bold" fill="#ef4444">wrong answer</tspan></text>
+
+  <!-- Divider line -->
+  <line x1="450" y1="208" x2="450" y2="530" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ===== LEFT PANEL: Narrow Context ===== -->
+  <rect x="35" y="210" width="395" height="315" rx="10" fill="url(#greenPanel)" stroke="#22c55e" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="35" y="210" width="395" height="36" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="35" y="230" width="395" height="16" fill="#22c55e" opacity="0.9"/>
+  <text x="232" y="234" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Narrow Context</text>
+
+  <!-- Small "valid zone" -->
+  <rect x="147" y="268" width="170" height="90" rx="45" fill="#22c55e" opacity="0.06" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="232" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#22c55e" font-weight="bold">"looks valid" zone</text>
+
+  <!-- Few answer dots, tightly clustered -->
+  <circle cx="180" cy="320" r="7" fill="#94a3b8" opacity="0.45"/>
+  <circle cx="205" cy="312" r="7" fill="#94a3b8" opacity="0.45"/>
+  <circle cx="232" cy="325" r="10" fill="#22c55e" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="232" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">&#10003;</text>
+  <circle cx="260" cy="315" r="7" fill="#94a3b8" opacity="0.45"/>
+  <circle cx="282" cy="322" r="7" fill="#94a3b8" opacity="0.45"/>
+
+  <!-- Agent label with arrow -->
+  <text x="345" y="295" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#475569">Agent</text>
+  <text x="345" y="310" font-family="Arial, sans-serif" font-size="11" fill="#475569">picks</text>
+  <path d="M 340 305 Q 300 320 246 324" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <circle cx="246" cy="324" r="2.5" fill="#22c55e"/>
+
+  <!-- Result -->
+  <text x="232" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#22c55e">&#10003; Correct</text>
+  <text x="232" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">The desire path leads</text>
+  <text x="232" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">to the right answer</text>
+
+  <rect x="130" y="460" width="205" height="44" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="232" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#166534" font-weight="bold">"valid-looking" &#8776; "correct"</text>
+  <text x="232" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#15803d">small zone, nowhere to go wrong</text>
+
+  <!-- ===== RIGHT PANEL: Broad Context ===== -->
+  <rect x="470" y="210" width="395" height="315" rx="10" fill="url(#redPanel)" stroke="#ef4444" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="470" y="210" width="395" height="36" rx="10" fill="#ef4444" opacity="0.85"/>
+  <rect x="470" y="230" width="395" height="16" fill="#ef4444" opacity="0.85"/>
+  <text x="667" y="234" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Broad Context</text>
+
+  <!-- Large "valid zone" -->
+  <rect x="490" y="262" width="355" height="120" rx="16" fill="#ef4444" opacity="0.05" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="667" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ef4444" font-weight="bold">"looks valid" zone</text>
+
+  <!-- Many answer dots, spread widely -->
+  <circle cx="515" cy="315" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="543" cy="330" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="570" cy="310" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="598" cy="340" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="625" cy="305" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="652" cy="335" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="680" cy="312" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="705" cy="340" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="730" cy="308" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="755" cy="332" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="780" cy="315" r="6" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="808" cy="328" r="6" fill="#94a3b8" opacity="0.4"/>
+
+  <!-- The one the agent picks (wrong) - highlighted red -->
+  <circle cx="680" cy="312" r="10" fill="#ef4444" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="680" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">&#10007;</text>
+
+  <!-- The actual correct answer - small and unassuming -->
+  <circle cx="543" cy="330" r="6" fill="#22c55e" opacity="0.5" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="543" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#22c55e" opacity="0.7">correct</text>
+
+  <!-- Agent label with arrow -->
+  <text x="756" y="290" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#475569">Agent</text>
+  <text x="756" y="305" font-family="Arial, sans-serif" font-size="11" fill="#475569">picks</text>
+  <path d="M 748 300 Q 720 308 694 312" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <circle cx="694" cy="312" r="2.5" fill="#ef4444"/>
+
+  <!-- Result -->
+  <text x="667" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ef4444">&#10007; Wrong</text>
+  <text x="667" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">The desire path leads to</text>
+  <text x="667" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">the first plausible answer</text>
+
+  <rect x="565" y="460" width="205" height="44" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="667" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#991b1b" font-weight="bold">"valid-looking" &#8800; "correct"</text>
+  <text x="667" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#b91c1c">huge zone, agent grabs the nearest</text>
+
+  <!-- Bottom tagline -->
+  <text x="450" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#475569">Your job: make the right answer the obvious one</text>
+  <text x="450" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Narrow the context so the desire path leads to correct</text>
+</svg>

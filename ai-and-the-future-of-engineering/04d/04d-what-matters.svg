@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="mattersGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="noMattersGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64748b" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#64748b" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="4" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="600" fill="#f0f4f8"/>
+
+  <!-- Title -->
+  <text x="450" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">What Makes a Codebase LLM-Friendly?</text>
+
+  <!-- Divider line -->
+  <line x1="450" y1="78" x2="450" y2="570" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ===== LEFT COLUMN: MATTERS ===== -->
+
+  <!-- Column header -->
+  <g transform="translate(30, 80)">
+    <rect x="0" y="0" width="390" height="40" rx="8" fill="#22c55e" opacity="0.9"/>
+    <text x="195" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Matters</text>
+  </g>
+
+  <!-- Card background -->
+  <rect x="30" y="132" width="390" height="430" rx="10" fill="url(#mattersGrad)" stroke="#22c55e" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Item 1: Feedback speed -->
+  <g transform="translate(50, 152)">
+    <circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/>
+    <text x="12" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#22c55e">&#9889;</text>
+    <text x="34" y="11" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Feedback Speed</text>
+    <text x="34" y="30" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Fast builds, fast browser interaction</text>
+    <text x="34" y="47" font-family="Arial, sans-serif" font-size="12" fill="#64748b">No-build frontends?</text>
+  </g>
+
+  <!-- Item 2: Fewer footguns -->
+  <g transform="translate(50, 258)">
+    <circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/>
+    <text x="12" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#22c55e">&#9888;</text>
+    <text x="34" y="11" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Fewer Footguns</text>
+    <text x="34" y="30" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Use type safety to catch mistakes</text>
+    <text x="34" y="47" font-family="Arial, sans-serif" font-size="12" fill="#64748b">before they get buried in context</text>
+  </g>
+
+  <!-- Item 3: Less stuff -->
+  <g transform="translate(50, 364)">
+    <circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/>
+    <text x="12" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#22c55e" font-weight="bold">-</text>
+    <text x="34" y="11" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Less Is More</text>
+    <text x="34" y="30" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Fewer tools, libraries, frameworks</text>
+    <text x="34" y="47" font-family="Arial, sans-serif" font-size="12" fill="#64748b">= less for the LLM to keep in context</text>
+  </g>
+
+  <!-- Item 4: Use what it knows -->
+  <g transform="translate(50, 470)">
+    <circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/>
+    <text x="12" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#22c55e">&#10132;</text>
+    <text x="34" y="11" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Use What It Knows</text>
+    <text x="34" y="30" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Follow the desire path</text>
+    <text x="34" y="47" font-family="Arial, sans-serif" font-size="12" fill="#64748b">e.g. CLI beats MCP every day of the week</text>
+  </g>
+
+
+  <!-- ===== RIGHT COLUMN: DOESN'T MATTER ===== -->
+
+  <!-- Column header -->
+  <g transform="translate(480, 80)">
+    <rect x="0" y="0" width="390" height="40" rx="8" fill="#94a3b8" opacity="0.8"/>
+    <text x="195" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Doesn't Matter</text>
+  </g>
+
+  <!-- Card background -->
+  <rect x="480" y="132" width="390" height="430" rx="10" fill="url(#noMattersGrad)" stroke="#94a3b8" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Item 1: Boilerplate -->
+  <g transform="translate(500, 152)">
+    <circle cx="12" cy="12" r="12" fill="#94a3b8" opacity="0.15"/>
+    <text x="12" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">&#10007;</text>
+    <text x="34" y="11" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#475569">Lots of Boilerplate</text>
+    <text x="34" y="30" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Java actually works great for LLMs!</text>
+    <text x="34" y="47" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Repetitive patterns are easy to replicate</text>
+  </g>
+
+  <!-- Item 2: Difficult languages -->
+  <g transform="translate(500, 258)">
+    <circle cx="12" cy="12" r="12" fill="#94a3b8" opacity="0.15"/>
+    <text x="12" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">&#10007;</text>
+    <text x="34" y="11" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#475569">"Difficult" Languages</text>
+    <text x="34" y="30" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Rust is fine</text>
+    <text x="34" y="47" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Strong type systems actually help the LLM</text>
+  </g>
+
+  <!-- Item 3: Hard for humans to read -->
+  <g transform="translate(500, 364)">
+    <circle cx="12" cy="12" r="12" fill="#94a3b8" opacity="0.15"/>
+    <text x="12" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">&#10007;</text>
+    <text x="34" y="11" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#475569">Hard for a Human to Read</text>
+    <text x="34" y="30" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">LLMs don't share our readability biases</text>
+    <text x="34" y="47" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Dense code is not dense for them</text>
+  </g>
+</svg>

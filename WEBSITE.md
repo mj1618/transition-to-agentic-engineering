@@ -1,10 +1,13 @@
-Create a simple website that makes a slideshow out of the images in order inside the folder @ai-and-the-future-of-engineering/
+Create a simple website that makes a slideshow out of the images inside @ai-and-the-future-of-engineering/
 
-It should allow back and forth between the images, start on the first one, and after the last image should show a Thank You page. Also before the first image should be a page with title "AI and the future of Engineering". Make the font and background look cool. Make sure the bg goes to the full width and height of the page.
+Each subfolder (sorted alphabetically) represents one slide. The slides are presented in subfolder order.
 
-All the 09 images should be shown as a clickable gallery (exit with another click). Same with all the 10 images and 11 images. All others should be separate pages. Note that 11g is a linkedin post to be embedded - use something for the gallery image and embed it only in the popup window.
+- If a subfolder contains a single image, show it as a full-page slide.
+- If a subfolder contains multiple images, show them as a clickable gallery (click to enlarge, click again to exit).
+- `.yaml` files in a subfolder describe embeds (e.g. x.com posts, linkedin posts) rather than images. Read the yaml to determine what to embed.
+- `11g-linkedin.png` is a linkedin post to be embedded — use the png as the gallery thumbnail and embed the actual post only in the popup window.
 
-04a is an x.com post with a video that should be embedded in the page.
+It should allow back and forth between slides, start on the first one, and after the last slide should show a Thank You page. Before the first slide should be a title page with "AI and the Future of Engineering". Make the font and background look cool. Make sure the bg goes to the full width and height of the page.
 
 Everything should be centered horizontally and vertically on the screen.
 
