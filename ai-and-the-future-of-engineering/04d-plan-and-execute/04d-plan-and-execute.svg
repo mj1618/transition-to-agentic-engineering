@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="planGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="specificGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="comboGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.04"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="4" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="600" fill="#f0f4f8"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1e293b">Plan + Execute = Leverage</text>
+
+  <!-- ===== LEFT PANEL: SPECIFIC TASK ===== -->
+  <g transform="translate(30, 62)">
+    <rect x="0" y="0" width="400" height="36" rx="8" fill="#3b82f6" opacity="0.9"/>
+    <text x="200" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Specific Task &#8594; Shortest Path</text>
+  </g>
+
+  <rect x="30" y="108" width="400" height="190" rx="10" fill="url(#specificGrad)" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Prompt box -->
+  <g transform="translate(50, 122)">
+    <rect x="0" y="0" width="170" height="46" rx="6" fill="white" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="12" y="18" font-family="Arial, sans-serif" font-size="10" fill="#64748b">PROMPT</text>
+    <text x="12" y="36" font-family="Arial, sans-serif" font-size="11" fill="#1e293b" font-weight="bold">"Add a login button"</text>
+  </g>
+
+  <!-- Arrow from prompt to result -->
+  <line x1="232" y1="145" x2="280" y2="145" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Result: straight line, quick but narrow -->
+  <g transform="translate(292, 122)">
+    <rect x="0" y="0" width="120" height="46" rx="6" fill="white" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="12" y="18" font-family="Arial, sans-serif" font-size="10" fill="#64748b">RESULT</text>
+    <text x="12" y="36" font-family="Arial, sans-serif" font-size="11" fill="#1e293b" font-weight="bold">Done. &#10004;</text>
+  </g>
+
+  <!-- Explanation -->
+  <g transform="translate(50, 190)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#3b82f6" font-weight="bold">Fast, direct, no detours</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="11" fill="#64748b">LLMs take the shortest path to answer</text>
+    <text x="0" y="38" font-family="Arial, sans-serif" font-size="11" fill="#64748b">a specific question. Great for focused tasks.</text>
+    <text x="0" y="62" font-family="Arial, sans-serif" font-size="11" fill="#64748b">But won't think about the bigger picture.</text>
+  </g>
+
+  <!-- Straight arrow illustration -->
+  <g transform="translate(50, 268)">
+    <circle cx="0" cy="0" r="8" fill="#3b82f6" opacity="0.2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3b82f6" font-weight="bold">A</text>
+    <line x1="14" y1="0" x2="330" y2="0" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+    <circle cx="350" cy="0" r="8" fill="#3b82f6" opacity="0.2"/>
+    <text x="350" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3b82f6" font-weight="bold">B</text>
+  </g>
+
+
+  <!-- ===== RIGHT PANEL: HIGH-LEVEL PLAN ===== -->
+  <g transform="translate(470, 62)">
+    <rect x="0" y="0" width="400" height="36" rx="8" fill="#8b5cf6" opacity="0.9"/>
+    <text x="200" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">High-Level Plan &#8594; Great Structure</text>
+  </g>
+
+  <rect x="470" y="108" width="400" height="190" rx="10" fill="url(#planGrad)" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Prompt box -->
+  <g transform="translate(490, 122)">
+    <rect x="0" y="0" width="200" height="46" rx="6" fill="white" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="12" y="18" font-family="Arial, sans-serif" font-size="10" fill="#64748b">PROMPT</text>
+    <text x="12" y="36" font-family="Arial, sans-serif" font-size="11" fill="#1e293b" font-weight="bold">"Plan auth for this app"</text>
+  </g>
+
+  <!-- Arrow from prompt to plan -->
+  <line x1="700" y1="145" x2="700" y2="175" stroke="#8b5cf6" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+
+  <!-- Plan output: structured tree -->
+  <g transform="translate(490, 185)">
+    <rect x="0" y="0" width="360" height="100" rx="6" fill="white" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="12" y="18" font-family="Arial, sans-serif" font-size="10" fill="#8b5cf6" font-weight="bold">PLAN</text>
+    <text x="12" y="36" font-family="monospace, Courier" font-size="10" fill="#475569">1. Set up auth middleware</text>
+    <text x="12" y="52" font-family="monospace, Courier" font-size="10" fill="#475569">2. Create login/signup pages</text>
+    <text x="12" y="68" font-family="monospace, Courier" font-size="10" fill="#475569">3. Add session management</text>
+    <text x="12" y="84" font-family="monospace, Courier" font-size="10" fill="#475569">4. Protect routes + add tests</text>
+  </g>
+
+  <!-- ===== BOTTOM: THE COMBINATION ===== -->
+  <g transform="translate(30, 320)">
+    <rect x="0" y="0" width="840" height="36" rx="8" fill="#16a34a" opacity="0.9"/>
+    <text x="420" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Combine Both: Plan Breaks Down Into Specific Executable Steps</text>
+  </g>
+
+  <rect x="30" y="366" width="840" height="210" rx="10" fill="url(#comboGrad)" stroke="#22c55e" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Plan node (left) -->
+  <g transform="translate(52, 384)">
+    <rect x="0" y="0" width="140" height="64" rx="8" fill="white" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow)"/>
+    <text x="70" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8b5cf6" font-weight="bold">HIGH-LEVEL PLAN</text>
+    <text x="70" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">LLM thinks about</text>
+    <text x="70" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">the big picture</text>
+  </g>
+
+  <!-- Arrow from plan to task list -->
+  <line x1="200" y1="416" x2="240" y2="416" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+  <!-- Task breakdown -->
+  <g transform="translate(252, 380)">
+    <!-- Task 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="190" height="30" rx="5" fill="white" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">1. Set up auth middleware</text>
+    </g>
+    <!-- Task 2 -->
+    <g transform="translate(0, 38)">
+      <rect x="0" y="0" width="190" height="30" rx="5" fill="white" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">2. Create login page</text>
+    </g>
+    <!-- Task 3 -->
+    <g transform="translate(0, 76)">
+      <rect x="0" y="0" width="190" height="30" rx="5" fill="white" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">3. Add session mgmt</text>
+    </g>
+    <!-- Task 4 -->
+    <g transform="translate(0, 114)">
+      <rect x="0" y="0" width="190" height="30" rx="5" fill="white" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">4. Protect routes + tests</text>
+    </g>
+  </g>
+
+  <!-- Arrows from each task to "shortest path" execution -->
+  <line x1="452" y1="395" x2="500" y2="395" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="452" y1="433" x2="500" y2="433" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="452" y1="471" x2="500" y2="471" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="452" y1="509" x2="500" y2="509" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Shortest path execution blocks -->
+  <g transform="translate(510, 380)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="130" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">Shortest path &#8594; &#10004;</text>
+    </g>
+    <g transform="translate(0, 38)">
+      <rect x="0" y="0" width="130" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">Shortest path &#8594; &#10004;</text>
+    </g>
+    <g transform="translate(0, 76)">
+      <rect x="0" y="0" width="130" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">Shortest path &#8594; &#10004;</text>
+    </g>
+    <g transform="translate(0, 114)">
+      <rect x="0" y="0" width="130" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">Shortest path &#8594; &#10004;</text>
+    </g>
+  </g>
+
+  <!-- Result arrow -->
+  <line x1="650" y1="452" x2="690" y2="452" stroke="#22c55e" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Result badge -->
+  <g transform="translate(700, 410)">
+    <rect x="0" y="0" width="150" height="84" rx="10" fill="white" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
+    <text x="75" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Quality Result</text>
+    <line x1="20" y1="34" x2="130" y2="34" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="75" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Structured plan</text>
+    <text x="75" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">+ fast execution</text>
+  </g>
+
+  <!-- Key insight -->
+  <g transform="translate(100, 555)">
+    <rect x="0" y="0" width="700" height="34" rx="8" fill="#eef2ff" stroke="#818cf8" stroke-width="2"/>
+    <text x="350" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4338ca" font-weight="bold">The trick: ask for the plan first, then execute each step as a focused task</text>
+  </g>
+</svg>
