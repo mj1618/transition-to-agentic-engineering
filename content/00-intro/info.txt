@@ -1,6 +1,6 @@
 I'm Matt!
 
-Ex-CTO @ VGW
+Former Engineer & CTO @ VGW
 Co-Founder @ SupplyWise
 
 Functional programmer (10+ ICFP Contest participant)
