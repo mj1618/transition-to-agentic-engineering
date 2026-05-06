@@ -11,6 +11,12 @@
       <stop offset="0%" stop-color="#f093fb"/>
       <stop offset="100%" stop-color="#f5576c"/>
     </linearGradient>
+
+    <!-- Gradient for Review agent -->
+    <linearGradient id="reviewerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
     
     <!-- Task list background -->
     <linearGradient id="taskListGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -25,6 +31,9 @@
     <marker id="arrowheadPink" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#f5576c"/>
     </marker>
+    <marker id="arrowheadGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#059669"/>
+    </marker>
   </defs>
   
   <style>
@@ -34,6 +43,9 @@
     }
     .loop-executor {
       animation: dashFlowReverse 2s linear infinite;
+    }
+    .loop-reviewer {
+      animation: dashFlow 2.5s linear infinite;
     }
     @keyframes dashFlow {
       to { stroke-dashoffset: -24; }
@@ -48,6 +60,9 @@
     }
     .arrow-to-executor {
       animation: arrowFlowReverse 1s linear infinite;
+    }
+    .arrow-to-reviewer {
+      animation: arrowFlow 1.2s linear infinite;
     }
     @keyframes arrowFlow {
       to { stroke-dashoffset: -18; }
@@ -173,21 +188,22 @@
     <g transform="translate(15, 60)">
       <rect x="0" y="0" width="24" height="24" rx="4" fill="#48bb78" stroke="#38a169" stroke-width="2"/>
       <path d="M 6 12 L 10 16 L 18 8" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#2d3748">Analyze requirements</text>
+      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#2d3748">User authentication</text>
     </g>
     
     <!-- Task 2 - Completed -->
     <g transform="translate(15, 100)">
       <rect x="0" y="0" width="24" height="24" rx="4" fill="#48bb78" stroke="#38a169" stroke-width="2"/>
       <path d="M 6 12 L 10 16 L 18 8" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#2d3748">Design architecture</text>
+      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#2d3748">User profiles</text>
     </g>
     
-    <!-- Task 3 - Completed -->
+    <!-- Task 3 - Completed (Being Reviewed) -->
     <g transform="translate(15, 140)">
+      <rect x="-5" y="-5" width="180" height="34" rx="6" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
       <rect x="0" y="0" width="24" height="24" rx="4" fill="#48bb78" stroke="#38a169" stroke-width="2"/>
       <path d="M 6 12 L 10 16 L 18 8" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#2d3748">Setup environment</text>
+      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#065f46">News feed</text>
     </g>
     
     <!-- Task 4 - In Progress (Current for Executor) -->
@@ -196,32 +212,32 @@
       <rect x="0" y="0" width="24" height="24" rx="4" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
       <!-- Spinning progress indicator -->
       <circle class="spinner" cx="12" cy="12" r="7" fill="none" stroke="white" stroke-width="2.5" stroke-dasharray="11 33" stroke-linecap="round"/>
-      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#92400e">Implement core logic</text>
+      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#92400e">Friend requests</text>
     </g>
     
     <!-- Task 5 - Pending -->
     <g transform="translate(15, 230)">
       <rect x="0" y="0" width="24" height="24" rx="4" fill="white" stroke="#cbd5e0" stroke-width="2"/>
-      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#718096">Write unit tests</text>
+      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#718096">Messaging / chat</text>
     </g>
     
     <!-- Task 6 - Pending -->
     <g transform="translate(15, 270)">
       <rect x="0" y="0" width="24" height="24" rx="4" fill="white" stroke="#cbd5e0" stroke-width="2"/>
-      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#718096">Integration testing</text>
+      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#718096">Photo uploads</text>
     </g>
     
     <!-- Task 7 - Pending -->
     <g transform="translate(15, 310)">
       <rect x="0" y="0" width="24" height="24" rx="4" fill="white" stroke="#cbd5e0" stroke-width="2"/>
-      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#718096">Code review</text>
+      <text x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#718096">Notifications</text>
     </g>
     
     <!-- Task 8 - Being written by Planner -->
     <g transform="translate(15, 350)">
       <rect x="-5" y="-5" width="180" height="34" rx="6" fill="#e9d5ff" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,2"/>
       <rect x="0" y="0" width="24" height="24" rx="4" fill="white" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,2"/>
-      <text class="typing" x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#7c3aed" font-style="italic">Deploy to prod...</text>
+      <text class="typing" x="34" y="17" font-family="Arial, sans-serif" font-size="13" fill="#7c3aed" font-style="italic">Like / reactions...</text>
       <!-- Pencil icon -->
       <g class="pencil" transform="translate(155, 3)">
         <path d="M 0 18 L 3 15 L 15 3 L 18 6 L 6 18 Z" fill="#667eea"/>
@@ -286,6 +302,52 @@
     <circle cx="555" cy="268" r="4" fill="#f5576c"/>
   </g>
   
+  <!-- Arrow from Task 3 to Review Agent -->
+  <g>
+    <path class="arrow-to-reviewer" d="M 345 232 C 295 222, 240 180, 195 155" fill="none" stroke="#059669" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#arrowheadGreen)"/>
+    <!-- Label badge -->
+    <rect x="230" y="180" width="80" height="18" rx="4" fill="#059669"/>
+    <text x="270" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">REVIEWING</text>
+    <!-- Indicator dot at task -->
+    <circle cx="345" cy="232" r="4" fill="#059669"/>
+  </g>
+
+  <!-- Connection line from Review Agent to Task 3 -->
+  <g>
+    <path d="M 195 155 C 240 180, 295 222, 345 232" fill="none" stroke="#059669" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- ========== REVIEW AGENT (Top Left) ========== -->
+  <g transform="translate(100, 85)">
+    <!-- Shadow -->
+    <circle cx="53" cy="53" r="45" fill="#00000020"/>
+    <!-- Agent circle -->
+    <circle cx="50" cy="50" r="45" fill="url(#reviewerGrad)"/>
+
+    <!-- Magnifying glass icon -->
+    <g transform="translate(50, 48)">
+      <circle cx="-4" cy="-4" r="12" fill="none" stroke="white" stroke-width="2.5"/>
+      <line x1="5" y1="5" x2="15" y2="15" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Agent label -->
+    <text x="50" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#059669">Reviewer</text>
+    <text x="50" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666666">Agent</text>
+
+    <!-- Circular loop arrow (left-side orientation) -->
+    <g transform="translate(50, 50)">
+      <!-- Loop arc (270 degrees) -->
+      <path class="loop-reviewer" d="M 0 -62 A 62 62 0 1 1 -62 0" fill="none" stroke="#059669" stroke-width="2.5" stroke-dasharray="8,4" opacity="0.8"/>
+      <!-- Arrow head -->
+      <polygon points="-62,-8 -54,0 -70,0" fill="#059669"/>
+      <!-- Loop label -->
+      <text x="0" y="-72" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#059669" font-weight="bold">LOOP</text>
+    </g>
+
+    <!-- Status label -->
+    <text x="50" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888888" font-style="italic">Reviewing tasks...</text>
+  </g>
+
   <!-- Subtitle -->
-  <text x="450" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#718096">Planner creates tasks continuously while Executor processes them sequentially</text>
+  <text x="450" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#718096">Planner creates tasks, Executor processes them, Reviewer validates completed work</text>
 </svg>

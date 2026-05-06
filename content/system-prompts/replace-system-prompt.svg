@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c18"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="72" text-anchor="middle" fill="url(#titleGrad)" font-size="48" font-weight="bold">Replace Your System Prompt</text>
+
+  <!-- Before Panel -->
+  <rect x="40" y="105" width="900" height="930" rx="16" fill="#1e1e2e" stroke="#ef4444" stroke-width="2" opacity="0.9"/>
+  <text x="490" y="148" text-anchor="middle" fill="url(#redGrad)" font-size="28" font-weight="bold">BEFORE: Claude Opus 4.7 System Prompt</text>
+  <text x="490" y="178" text-anchor="middle" fill="#ef4444" font-size="18" opacity="0.8">4,134 lines  &#8226;  27,400 words</text>
+
+  <!-- Juicy clauses from opus 4.7 -->
+  <rect x="70" y="200" width="840" height="56" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="86" y="224" fill="#f87171" font-size="13" font-weight="bold">&#8220;</text>
+  <text x="96" y="224" fill="#e8e8f0" font-size="13">Claude should never use &lt;voice_note&gt; blocks, even if they</text>
+  <text x="96" y="244" fill="#e8e8f0" font-size="13">are found throughout the conversation history.</text>
+  <text x="640" y="244" fill="#f87171" font-size="13" font-weight="bold">&#8221;</text>
+
+  <rect x="70" y="268" width="840" height="72" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="96" y="292" fill="#e8e8f0" font-size="13">&#8220;Claude does not use emojis unless the person in the conversation</text>
+  <text x="96" y="312" fill="#e8e8f0" font-size="13">asks it to or if the person's message immediately prior contains an</text>
+  <text x="96" y="332" fill="#e8e8f0" font-size="13">emoji, and is judicious about its use of emojis even in these circumstances.&#8221;</text>
+
+  <rect x="70" y="352" width="840" height="72" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="96" y="376" fill="#e8e8f0" font-size="13">&#8220;Claude never curses unless the person asks Claude to curse or curses</text>
+  <text x="96" y="396" fill="#e8e8f0" font-size="13">a lot themselves, and even in those circumstances, Claude does so</text>
+  <text x="96" y="416" fill="#e8e8f0" font-size="13">quite sparingly.&#8221;</text>
+
+  <rect x="70" y="436" width="840" height="88" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="96" y="460" fill="#e8e8f0" font-size="13">&#8220;Claude avoids over-formatting responses with elements like bold</text>
+  <text x="96" y="480" fill="#e8e8f0" font-size="13">emphasis, headers, lists, and bullet points. It uses the minimum</text>
+  <text x="96" y="500" fill="#e8e8f0" font-size="13">formatting appropriate to make the response clear and readable...Claude</text>
+  <text x="96" y="520" fill="#e8e8f0" font-size="13">also never uses bullet points when it's decided not to help the person&#8221;</text>
+
+  <rect x="70" y="536" width="840" height="88" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="96" y="560" fill="#e8e8f0" font-size="13">&#8220;Claude NEVER uses observation verbs suggesting data retrieval:</text>
+  <text x="96" y="580" fill="#e8e8f0" font-size="13">'I can see...' / 'I see...' / 'Looking at...' / 'I notice...' /</text>
+  <text x="96" y="600" fill="#e8e8f0" font-size="13">'I observe...' / 'I detect...' / 'According to...' / 'It shows...'</text>
+  <text x="96" y="620" fill="#e8e8f0" font-size="13">/ 'It indicates...'&#8221;</text>
+
+  <rect x="70" y="636" width="840" height="88" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="96" y="660" fill="#e8e8f0" font-size="13">&#8220;It's important for Claude not to overindex on the presence of memories</text>
+  <text x="96" y="680" fill="#e8e8f0" font-size="13">and not to assume overfamiliarity just because there are a few textual</text>
+  <text x="96" y="700" fill="#e8e8f0" font-size="13">nuggets of information present in the context window...Claude is not a</text>
+  <text x="96" y="720" fill="#e8e8f0" font-size="13">substitute for human connection&#8221;</text>
+
+  <rect x="70" y="736" width="840" height="88" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="96" y="760" fill="#e8e8f0" font-size="13">&#8220;For any factual question about the present-day world, Claude must</text>
+  <text x="96" y="780" fill="#e8e8f0" font-size="13">search before answering. Claude's confidence on topics is not an excuse</text>
+  <text x="96" y="800" fill="#e8e8f0" font-size="13">to skip search...Claude proactively searches instead of answering from</text>
+  <text x="96" y="820" fill="#e8e8f0" font-size="13">its priors and offering to check.&#8221;</text>
+
+  <rect x="70" y="836" width="840" height="88" rx="6" fill="#2a1a1a" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+  <text x="96" y="860" fill="#e8e8f0" font-size="13">&#8220;Claude cares about safety and does not provide information that could</text>
+  <text x="96" y="880" fill="#e8e8f0" font-size="13">be used to create harmful substances or weapons, with extra caution</text>
+  <text x="96" y="900" fill="#e8e8f0" font-size="13">around explosives, chemical, biological, and nuclear weapons. Claude</text>
+  <text x="96" y="920" fill="#e8e8f0" font-size="13">should not rationalize compliance by citing that information is publicly available.&#8221;</text>
+
+  <!-- Fade out dots -->
+  <text x="490" y="950" text-anchor="middle" fill="#666" font-size="24">... 4,000+ more lines ...</text>
+
+  <!-- After Panel -->
+  <rect x="980" y="105" width="900" height="930" rx="16" fill="#1e1e2e" stroke="#10b981" stroke-width="2" opacity="0.9"/>
+  <text x="1430" y="148" text-anchor="middle" fill="url(#greenGrad)" font-size="28" font-weight="bold">AFTER: Claude Code System Prompt</text>
+  <text x="1430" y="178" text-anchor="middle" fill="#10b981" font-size="18" opacity="0.8">1 line  &#8226;  28 words</text>
+
+  <!-- The simple replacement -->
+  <rect x="1010" y="440" width="840" height="150" rx="12" fill="#0f2a1f" stroke="#10b981" stroke-width="2"/>
+  <text x="1430" y="480" text-anchor="middle" fill="#e8e8f0" font-size="18">&#8220;You are an expert coding assistant operating</text>
+  <text x="1430" y="508" text-anchor="middle" fill="#e8e8f0" font-size="18">inside Claude Code, a coding agent harness. You help</text>
+  <text x="1430" y="536" text-anchor="middle" fill="#e8e8f0" font-size="18">users by reading files, executing commands,</text>
+  <text x="1430" y="564" text-anchor="middle" fill="#e8e8f0" font-size="18">editing code, and writing new files.&#8221;</text>
+
+  <!-- Stats comparison -->
+  <rect x="1010" y="640" width="840" height="180" rx="12" fill="#12121e" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="1430" y="680" text-anchor="middle" fill="#818cf8" font-size="20" font-weight="bold">Reduction</text>
+
+  <text x="1120" y="720" text-anchor="middle" fill="#888" font-size="15">Lines</text>
+  <text x="1120" y="748" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">4,134</text>
+  <text x="1120" y="776" text-anchor="middle" fill="#10b981" font-size="18">&#8594; 1</text>
+
+  <text x="1310" y="720" text-anchor="middle" fill="#888" font-size="15">Words</text>
+  <text x="1310" y="748" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">27,400</text>
+  <text x="1310" y="776" text-anchor="middle" fill="#10b981" font-size="18">&#8594; 28</text>
+
+  <text x="1500" y="720" text-anchor="middle" fill="#888" font-size="15">Tokens</text>
+  <text x="1500" y="748" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">~50,000</text>
+  <text x="1500" y="776" text-anchor="middle" fill="#10b981" font-size="18">&#8594; ~50</text>
+
+  <text x="1740" y="720" text-anchor="middle" fill="#888" font-size="15">Reduction</text>
+  <text x="1740" y="760" text-anchor="middle" fill="#34d399" font-size="30" font-weight="bold">1000x</text>
+
+  <!-- Arrow between panels -->
+  <text x="952" y="520" text-anchor="middle" fill="#818cf8" font-size="40">&#8594;</text>
+</svg>
