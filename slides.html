@@ -654,7 +654,17 @@
 
       {
         type: 'statement',
+        html: '<strong>Less Programmers?</strong><br><br><img src="' + BASE + '/less-programmers.png" style="max-width:60%;max-height:55vh;border-radius:8px;" />'
+      },
+
+      {
+        type: 'statement',
         html: 'The lack of hands-on human coding <strong>introduced a different kind of engineering work, focused on systems, scaffolding, and leverage</strong>.<br><span style="font-size:0.5em;color:#555;font-style:italic;">— OpenAI</span>'
+      },
+
+      {
+        type: 'statement',
+        html: '<strong>Is it really that good?</strong><br><br><img src="' + BASE + '/got.png" style="max-width:60%;max-height:55vh;border-radius:8px;" />'
       },
 
       { type: 'single', src: BASE + '/03-context-matters/03a-context-matters.svg' },
@@ -724,17 +734,18 @@
         type: 'photo',
         src: BASE + '/09-desire-path/Desire_path_-_52849400711.jpg',
         title: 'The Desire Path',
-        subtitle: 'Engineers will find their own way to use AI \u2014 your job is to pave the path'
+        subtitle: 'Engineers will find their own way to use AI \u2014 your job is to pave the path',
+        skip: true
       },
 
       { type: 'single', src: BASE + '/11-what-matters/04d-what-matters.svg' },
-      { type: 'single', src: BASE + '/12-plan-and-execute/04d-plan-and-execute.svg' },
+      { type: 'single', src: BASE + '/12-plan-and-execute/04d-plan-and-execute.svg', skip: true },
       { type: 'single', src: BASE + '/13-not-easy/04d1-not-easy.svg' },
       { type: 'single', src: BASE + '/14-stop-reading-code/04d2-stop-reading-code.svg' },
-      { type: 'single', src: BASE + '/15-where-to-start/04e-where-to-start.svg' },
+      { type: 'single', src: BASE + '/15-where-to-start/04e-where-to-start.svg', skip: true },
 
-      { type: 'single', src: BASE + '/16-models-pricing/05-models-pricing.png' },
-      { type: 'single', src: BASE + '/17-engineering-enablement/08-engineering-enablement.svg' },
+      { type: 'single', src: BASE + '/16-models-pricing/05-models-pricing.png', skip: true },
+      { type: 'single', src: BASE + '/17-engineering-enablement/08-engineering-enablement.svg', skip: true },
 
       {
         type: 'gallery',
@@ -786,12 +797,28 @@
 
       {
         type: 'statement',
+        html: '<strong>No.</strong><br><br><img src="' + BASE + '/opus.png" style="max-width:60%;max-height:55vh;border-radius:8px;" />'
+      },
+
+      {
+        type: 'statement',
         html: '<strong>Where Does Sentience Come From?</strong><br><br><span style="font-size:0.5em;text-align:left;display:block;color:#b0b0c8;line-height:2.4;">' +
           '<span style="color:#c4b5fd;font-weight:700;">Biological Naturalism:</span> Consciousness is caused by specific neurobiological processes in the brain<br>' +
           '<span style="color:#c4b5fd;font-weight:700;">Panpsychism / Cosmopsychism:</span> Consciousness is a fundamental property of all matter in the universe<br>' +
           '<span style="color:#c4b5fd;font-weight:700;">Emergentism:</span> Consciousness emerges from sufficient complexity in any information-processing system<br>' +
           '<span style="color:#c4b5fd;font-weight:700;">Quantum Consciousness:</span> Consciousness originates from quantum-level processes in microtubules<br>' +
           '<span style="color:#c4b5fd;font-weight:700;">Dualism:</span> Consciousness is non-physical &#8212; a separate substance or property beyond the material world</span>'
+      },
+
+      {
+        type: 'statement',
+        html: '<strong>Split Brain</strong><br><br><span style="font-size:0.42em;text-align:left;display:block;color:#b0b0c8;line-height:2.2;">' +
+          '<span style="color:#9898b0;font-style:italic;">In severe epilepsy cases, surgeons severed the corpus callosum &#8212; the bridge between left and right brain hemispheres &#8212; to stop seizures from spreading. The two halves became independent, revealing startling truths about consciousness:</span><br><br>' +
+          '<span style="color:#c4b5fd;font-weight:700;">Wardrobe wars:</span> A patient buttoned their shirt with their left hand while their right hand followed behind undoing each button<br>' +
+          '<span style="color:#c4b5fd;font-weight:700;">Two visual worlds:</span> Each eye feeds a different hemisphere &#8212; patients could see an object in one visual field and have no knowledge of it in the other<br>' +
+          '<span style="color:#c4b5fd;font-weight:700;">The phantom artist:</span> When shown images and asked to draw them, patients\' right hand would begin sketching without any conscious awareness of what it was depicting<br>' +
+          '<span style="color:#c4b5fd;font-weight:700;">The confabulating brain:</span> Gazzaniga showed &quot;snow&quot; to the right hemisphere and &quot;chicken&quot; to the left. Asked to pick a related image, the left hand chose a shovel (for snow) &#8212; but the left brain, unaware of the snow, confidently explained the shovel was &quot;for cleaning out the chicken shed&quot;<br>' +
+          '<span style="color:#c4b5fd;font-weight:700;">Decisions before awareness:</span> Brain-wave studies (Libet, 1983) show neural activity for a decision begins ~500ms before we consciously &quot;decide&quot; &#8212; raising the question: is free will just a post-hoc narrative we tell ourselves?</span>'
       },
 
       {
@@ -1005,6 +1032,9 @@
 
     function navigate(dir) {
       var n = currentSlide + dir;
+      while (n >= 0 && n < slides.length && slides[n].skip) {
+        n += dir;
+      }
       if (n >= 0 && n < slides.length) {
         currentSlide = n;
         renderSlide();
